@@ -53,7 +53,7 @@ delete-sequencer-validators: (delete-sequencer-validator "node0") (delete-sequen
 
 wait-for-sequencer:
   kubectl wait -n astria-dev-cluster deployment celestia-local --for=condition=Available=True --timeout=600s
-  kubectl wait -n astria-dev-cluster deployment sequencer --for=condition=Available=True --timeout=600s
+  kubectl wait -n astria-dev-cluster statefulset sequencer --for=condition=Available=True --timeout=600s
 
 defaultRollupName          := "astria"
 defaultNetworkId           := ""
