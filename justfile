@@ -103,7 +103,7 @@ deploy-hyperlane-agents rollupName=defaultRollupName agentConfig=defaultHypAgent
 
 delete-hyperlane-agents rollupName=defaultRollupNameForDelete:
   helm uninstall {{rollupName}}-hyperlane-agents-chart
-
+# delete cluster
 clean:
   kind delete cluster --name astria-dev-cluster
 
